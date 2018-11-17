@@ -40,8 +40,7 @@ jobs:
         - '[[ $TRAVIS_BRANCH =~ ^greenkeeper.*$ ]] && greenkeeper-lockfile-update || echo "Skipping greenkeeper-lockfile-update";'
         - npm audit
         - commitlint-travis
-        # - lerna run lint
-        # - lerna run build
+        - npm run lint
         - travis_retry github-label-sync -a "$GH_TOKEN" -l 'https://git.io/fAe5i' seantrane/nyc-config
         # - lerna run test
         - '[[ $TRAVIS_BRANCH =~ ^greenkeeper.*$ ]] && greenkeeper-lockfile-upload || echo "Skipping greenkeeper-lockfile-upload";'

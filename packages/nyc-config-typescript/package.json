@@ -1,7 +1,7 @@
 {
   "name": "@seantrane/nyc-config-typescript",
   "description": "An extendable istanbuljs/nyc configuration for TypeScript",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "author": "@seantrane",
   "license": "MIT",
   "homepage": "https://github.com/seantrane/nyc-config#readme",

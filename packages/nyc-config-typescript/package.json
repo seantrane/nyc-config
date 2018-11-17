@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "@seantrane",
   "license": "MIT",
-  "homepage": "https://github.com/seantrane/nyc-config#readme",
+  "homepage": "https://github.com/seantrane/nyc-config/tree/master/packages/nyc-config-typescript#readme",
   "repository": "github:seantrane/nyc-config",
   "bugs": "https://github.com/seantrane/nyc-config/issues",
   "keywords": [

@@ -1,0 +1,45 @@
+{
+  "check-coverage": true,
+  "per-file": false,
+  "branches": 70,
+  "functions": 70,
+  "lines": 70,
+  "statements": 70,
+  "watermarks": {
+    "branches": [
+      65,
+      75
+    ],
+    "functions": [
+      65,
+      75
+    ],
+    "lines": [
+      65,
+      75
+    ],
+    "statements": [
+      65,
+      75
+    ]
+  },
+  "extension": [
+    ".ts",
+    ".tsx"
+  ],
+  "exclude": [
+    "**/*.d.ts",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "coverage"
+  ],
+  "include": [
+    "**/*.ts"
+  ],
+  "reporter": [
+    "html",
+    "lcov",
+    "text"
+  ],
+  "all": true
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@seantrane/nyc-config-typescript-70",
+  "description": "An extendable istanbuljs/nyc configuration for TypeScript, requiring 70% code coverage",
+  "version": "0.0.0",
+  "author": "@seantrane",
+  "license": "MIT",
+  "homepage": "https://github.com/seantrane/nyc-config/tree/master/packages/nyc-config-typescript-70#readme",
+  "repository": "github:seantrane/nyc-config",
+  "bugs": "https://github.com/seantrane/nyc-config/issues",
+  "keywords": [
+    "config",
+    "coverage",
+    "nyc",
+    "test"
+  ],
+  "main": "index.json",
+  "files": [
+    "index.json"
+  ],
+  "scripts": {
+    "test": "exit 0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

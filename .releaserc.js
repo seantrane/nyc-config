@@ -14,25 +14,25 @@
  * - https://github.com/Updater/semantic-release-monorepo
  * - https://github.com/lerna/lerna
  */
-const hooks = require('semantic-release-monorepo-hooks');
-const output = hooks();
+// const hooks = require('semantic-release-monorepo-hooks');
+// const output = hooks();
 
-const publish = output.isLastModified
-  ? [
-    // {
-    //   path: '@semantic-release/exec',
-    //   cmd: 'echo "Execute publish/deploy commands and scripts"'
-    // },
-    '@semantic-release/github',
-    '@semantic-release/npm'
-  ]
-  : [
-    '@semantic-release/github'
-  ];
+// const publish = output.isLastModified
+//   ? [
+//     // {
+//     //   path: '@semantic-release/exec',
+//     //   cmd: 'echo "Execute publish/deploy commands and scripts"'
+//     // },
+//     '@semantic-release/github',
+//     '@semantic-release/npm'
+//   ]
+//   : [
+//     '@semantic-release/github'
+//   ];
 
 module.exports = {
   branch: 'master',
-  tagFormat: 'v${version}',
+  // tagFormat: 'v${version}',
   /**
    * Reduce expensive network calls (50%+ runtime reduction)
    * By default, semantic-release's verifyConditions plugin configuration contains
@@ -50,7 +50,7 @@ module.exports = {
    */
   verifyConditions: [],
   verifyRelease: [
-    // '@semantic-release/changelog',
+    '@semantic-release/changelog',
     '@semantic-release/git',
     // '@semantic-release/github',
     '@semantic-release/npm'
@@ -68,19 +68,19 @@ module.exports = {
       'message': 'chore(' + output.package + '): release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
     }
   ],
-  publish: '@semantic-release/npm',
+  publish: '@semantic-release/npm'
   // success: [
   //   '@semantic-release/github'
   // ],
   // fail: [
   //   '@semantic-release/github'
   // ],
-  monorepo: {
-    analyzeCommits: [
-      '@semantic-release/commit-analyzer'
-    ],
-    generateNotes: [
-      '@semantic-release/release-notes-generator'
-    ]
-  }
+  // monorepo: {
+  //   analyzeCommits: [
+  //     '@semantic-release/commit-analyzer'
+  //   ],
+  //   generateNotes: [
+  //     '@semantic-release/release-notes-generator'
+  //   ]
+  // }
 };

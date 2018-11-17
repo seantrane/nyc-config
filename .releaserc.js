@@ -62,11 +62,11 @@ module.exports = {
       path: '@semantic-release/changelog',
       changelogTitle: '# CHANGELOG'
     },
-    '@semantic-release/npm',
-    {
-      'path': '@semantic-release/git',
-      'message': 'chore(' + output.package + '): release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
-    }
+    '@semantic-release/npm'
+    // {
+    //   'path': '@semantic-release/git',
+    //   'message': 'chore(' + output.package + '): release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
+    // }
   ],
   publish: '@semantic-release/npm'
   // success: [

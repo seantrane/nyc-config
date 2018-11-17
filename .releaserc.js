@@ -19,12 +19,12 @@ const output = hooks();
 
 const publish = output.isLastModified
   ? [
-    {
-      path: '@semantic-release/exec',
-      cmd: 'echo "Execute publish/deploy commands and scripts"'
-    },
-    '@semantic-release/npm',
-    '@semantic-release/github'
+    // {
+    //   path: '@semantic-release/exec',
+    //   cmd: 'echo "Execute publish/deploy commands and scripts"'
+    // },
+    '@semantic-release/github',
+    '@semantic-release/npm'
   ]
   : [
     '@semantic-release/github'
@@ -50,9 +50,9 @@ module.exports = {
    */
   verifyConditions: [],
   verifyRelease: [
-    '@semantic-release/changelog',
+    // '@semantic-release/changelog',
     '@semantic-release/git',
-    '@semantic-release/github',
+    // '@semantic-release/github',
     '@semantic-release/npm'
   ]
     .map(require)
@@ -68,7 +68,7 @@ module.exports = {
       'message': 'chore(' + output.package + '): release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
     }
   ],
-  publish: publish,
+  publish: '@semantic-release/npm',
   // success: [
   //   '@semantic-release/github'
   // ],

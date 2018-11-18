@@ -14,21 +14,21 @@
  * - https://github.com/Updater/semantic-release-monorepo
  * - https://github.com/lerna/lerna
  */
-// const hooks = require('semantic-release-monorepo-hooks');
-// const output = hooks();
+const hooks = require('semantic-release-monorepo-hooks');
+const output = hooks();
 
-// const publish = output.isLastModified
-//   ? [
-//     // {
-//     //   path: '@semantic-release/exec',
-//     //   cmd: 'echo "Execute publish/deploy commands and scripts"'
-//     // },
-//     '@semantic-release/github',
-//     '@semantic-release/npm'
-//   ]
-//   : [
-//     '@semantic-release/github'
-//   ];
+const publish = output.isLastModified
+  ? [
+    // {
+    //   path: '@semantic-release/exec',
+    //   cmd: 'echo "Execute publish/deploy commands and scripts"'
+    // },
+    '@semantic-release/npm',
+    '@semantic-release/github'
+  ]
+  : [
+    '@semantic-release/github'
+  ];
 
 module.exports = {
   branch: 'master',
@@ -77,10 +77,7 @@ module.exports = {
     //   'message': 'chore(' + output.package + '): release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
     // }
   ],
-  publish: [
-    '@semantic-release/npm',
-    '@semantic-release/github'
-  ],
+  publish: publish,
   success: [
     '@semantic-release/github'
   ],

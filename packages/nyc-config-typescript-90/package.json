@@ -1,7 +1,7 @@
 {
   "name": "@seantrane/nyc-config-typescript-90",
   "description": "An extendable istanbuljs/nyc configuration for TypeScript, requiring 90% code coverage",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "@seantrane",
   "license": "MIT",
   "homepage": "https://github.com/seantrane/nyc-config/tree/master/packages/nyc-config-typescript-90#readme",

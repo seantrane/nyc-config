@@ -51,30 +51,12 @@ module.exports = {
   verifyConditions: [],
   verifyRelease: [
     '@semantic-release/changelog',
+    '@semantic-release/npm',
     '@semantic-release/git',
-    // '@semantic-release/github',
-    '@semantic-release/npm'
+    '@semantic-release/github'
   ]
     .map(require)
     .map(x => x.verifyConditions),
-  prepare: [
-    {
-      path: '@semantic-release/changelog',
-      changelogTitle: '# CHANGELOG'
-    },
-    '@semantic-release/npm'
-    // {
-    //   'path': '@semantic-release/git',
-    //   'message': 'chore(' + output.package + '): release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
-    // }
-  ],
-  publish: '@semantic-release/npm',
-  // success: [
-  //   '@semantic-release/github'
-  // ],
-  // fail: [
-  //   '@semantic-release/github'
-  // ],
   monorepo: {
     analyzeCommits: [
       '@semantic-release/commit-analyzer'
@@ -82,5 +64,27 @@ module.exports = {
     generateNotes: [
       '@semantic-release/release-notes-generator'
     ]
-  }
+  },
+  prepare: [
+    {
+      path: '@semantic-release/changelog',
+      changelogTitle: '# CHANGELOG'
+    },
+    '@semantic-release/npm',
+    '@semantic-release/git'
+    // {
+    //   'path': '@semantic-release/git',
+    //   'message': 'chore(' + output.package + '): release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
+    // }
+  ],
+  publish: [
+    '@semantic-release/npm',
+    '@semantic-release/github'
+  ],
+  success: [
+    '@semantic-release/github'
+  ],
+  fail: [
+    '@semantic-release/github'
+  ]
 };

@@ -14,25 +14,30 @@
  * - https://github.com/Updater/semantic-release-monorepo
  * - https://github.com/lerna/lerna
  */
-const hooks = require('semantic-release-monorepo-hooks');
-const output = hooks();
+// const hooks = require('semantic-release-monorepo-hooks');
+// const output = hooks();
 
-const publish = output.isLastModified
-  ? [
+const publish = ['@semantic-release/github'];
+// if (output.isLastModified)
+  publish.unshift([
     // {
     //   path: '@semantic-release/exec',
     //   cmd: 'echo "Execute publish/deploy commands and scripts"'
     // },
-    '@semantic-release/npm',
-    '@semantic-release/github'
-  ]
-  : [
-    '@semantic-release/github'
-  ];
+    '@semantic-release/npm'
+  ]);
 
 module.exports = {
   branch: 'master',
   // tagFormat: 'v${version}',
+  monorepo: {
+    analyzeCommits: [
+      '@semantic-release/commit-analyzer'
+    ],
+    generateNotes: [
+      '@semantic-release/release-notes-generator'
+    ]
+  },
   /**
    * Reduce expensive network calls (50%+ runtime reduction)
    * By default, semantic-release's verifyConditions plugin configuration contains
@@ -57,14 +62,6 @@ module.exports = {
   ]
     .map(require)
     .map(x => x.verifyConditions),
-  monorepo: {
-    analyzeCommits: [
-      '@semantic-release/commit-analyzer'
-    ],
-    generateNotes: [
-      '@semantic-release/release-notes-generator'
-    ]
-  },
   prepare: [
     {
       path: '@semantic-release/changelog',

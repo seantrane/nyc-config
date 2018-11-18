@@ -68,19 +68,19 @@ module.exports = {
     //   'message': 'chore(' + output.package + '): release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
     // }
   ],
-  publish: '@semantic-release/npm'
+  publish: '@semantic-release/npm',
   // success: [
   //   '@semantic-release/github'
   // ],
   // fail: [
   //   '@semantic-release/github'
   // ],
-  // monorepo: {
-  //   analyzeCommits: [
-  //     '@semantic-release/commit-analyzer'
-  //   ],
-  //   generateNotes: [
-  //     '@semantic-release/release-notes-generator'
-  //   ]
-  // }
+  monorepo: {
+    analyzeCommits: [
+      '@semantic-release/commit-analyzer'
+    ],
+    generateNotes: [
+      '@semantic-release/release-notes-generator'
+    ]
+  }
 };

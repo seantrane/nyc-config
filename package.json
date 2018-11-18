@@ -1,7 +1,7 @@
 {
   "name": "@seantrane/nyc-config",
   "description": "A monorepo for extendable istanbuljs/nyc configurations",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "author": "@seantrane",
   "license": "MIT",
   "homepage": "https://github.com/seantrane/nyc-config#readme",
@@ -18,10 +18,13 @@
     "git:commit": "git-cz",
     "lerna": "lerna",
     "lint:md": "markdownlint -i 'node_modules/' -c '.markdownlint.yaml' './'",
+    "lint:packages": "lerna run lint",
     "lint:sh": "docker pull koalaman/shellcheck:stable && docker run -v \"$PWD:/mnt\" koalaman/shellcheck ./packages/**/*.sh && docker kill koalaman/shellcheck 2> /dev/null; docker rm -f koalaman/shellcheck 2> /dev/null; docker rmi -f koalaman/shellcheck:stable 2> /dev/null",
-    "lint": "npm run lint:md",
+    "lint": "npm run lint:md && npm run lint:packages",
     "markdownlint": "markdownlint",
-    "semantic-release": "semantic-release"
+    "semantic-release": "lerna exec --concurrency 1 -- semantic-release -e semantic-release-monorepo",
+    "test:packages": "lerna run test",
+    "test": "npm run test:packages"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.2.1",
@@ -41,8 +44,6 @@
     "markdownlint-cli": "^0.13.0",
     "semantic-release": "^15.10.8",
     "semantic-release-monorepo": "^6.1.1",
-    "semantic-release-monorepo-hooks": "^2.6.2",
-    "semantic-release-plugin-decorators": "^2.0.0",
     "shx": "^0.3.2"
   },
   "config": {

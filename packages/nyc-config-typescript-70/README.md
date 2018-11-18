@@ -64,7 +64,7 @@ Contributions are always appreciated. Read [CONTRIBUTING.md](https://github.com/
 
 ## Changelog <a id="changelog"></a>
 
-Release details are documented in the [CHANGELOG.md](https://github.com/seantrane/nyc-config/blob/master/CHANGELOG.md) file, and on the [GitHub Releases page](https://github.com/seantrane/nyc-config/releases).
+Release details are documented in the [CHANGELOG.md](https://github.com/seantrane/nyc-config/blob/master/packages/nyc-config-typescript-70/CHANGELOG.md) file, and on the [GitHub Releases page](https://github.com/seantrane/nyc-config/releases).
 
 ---
 

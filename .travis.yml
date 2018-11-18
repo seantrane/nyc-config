@@ -42,10 +42,9 @@ jobs:
         - commitlint-travis
         - npm run lint
         - travis_retry github-label-sync -a "$GH_TOKEN" -l 'https://git.io/fAe5i' seantrane/nyc-config
-        # - lerna run test
+        - npm run test
         - '[[ $TRAVIS_BRANCH =~ ^greenkeeper.*$ ]] && greenkeeper-lockfile-upload || echo "Skipping greenkeeper-lockfile-upload";'
     - stage: deploy
       name: 'Publish and Release'
       script:
-        # - lerna exec --concurrency 1 "npx --no-install semantic-release -e semantic-release-monorepo" && node -e "require('semantic-release-monorepo-hooks').hookAfterAll()"
         - lerna exec --concurrency 1 "npx --no-install semantic-release -e semantic-release-monorepo"

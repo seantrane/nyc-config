@@ -11,6 +11,8 @@ notifications:
   email: false
 services:
   - docker
+git:
+  depth: false
 branches:
   only:
     - master

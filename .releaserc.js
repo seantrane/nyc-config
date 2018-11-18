@@ -9,7 +9,7 @@
 
 module.exports = {
   branch: 'master',
-  // tagFormat: '${LERNA_PACKAGE_NAME}-v${version}',
+  // tagFormat: 'v${version}',
   monorepo: {
     analyzeCommits: [
       '@semantic-release/commit-analyzer'
@@ -40,7 +40,7 @@ module.exports = {
     '@semantic-release/npm',
     {
       'path': '@semantic-release/git',
-      'message': 'chore(${LERNA_PACKAGE_NAME}): release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
+      'message': 'chore(release): ${nextRelease.gitTag} [skip ci]\n\n${nextRelease.notes}'
     }
   ],
   publish: [

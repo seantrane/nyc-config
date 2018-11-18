@@ -68,11 +68,10 @@ module.exports = {
       changelogTitle: '# CHANGELOG'
     },
     '@semantic-release/npm',
-    '@semantic-release/git'
-    // {
-    //   'path': '@semantic-release/git',
-    //   'message': 'chore(' + output.package + '): release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
-    // }
+    {
+      'path': '@semantic-release/git',
+      'message': 'chore(${LERNA_PACKAGE_NAME}): release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
+    }
   ],
   publish: publish,
   success: [

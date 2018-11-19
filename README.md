@@ -4,7 +4,7 @@
 
 ---
 
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![Build Status](https://travis-ci.com/seantrane/nyc-config.svg?branch=master)](https://travis-ci.com/seantrane/nyc-config) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 ## Table of Contents
 
@@ -72,7 +72,7 @@ Contributions are always appreciated. Read [CONTRIBUTING.md](https://github.com/
 
 ## Changelog <a id="changelog"></a>
 
-Release details are documented in the [CHANGELOG.md](https://github.com/seantrane/nyc-config/blob/master/CHANGELOG.md) file, and on the [GitHub Releases page](https://github.com/seantrane/nyc-config/releases).
+Release details are documented in the CHANGELOG.md file of each package, and on the [GitHub Releases page](https://github.com/seantrane/nyc-config/releases).
 
 ---
 

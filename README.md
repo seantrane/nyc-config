@@ -26,7 +26,11 @@ All default configurations require at least 85% code coverage, with watermarks a
 
 ### Packages:
 
-- `@seantrane/nyc-config-typescript`
+- [`@seantrane/nyc-config-typescript`](https://github.com/seantrane/nyc-config/tree/master/packages/nyc-config-typescript#readme) _(85% coverage)_
+- [`@seantrane/nyc-config-typescript-90`](https://github.com/seantrane/nyc-config/tree/master/packages/nyc-config-typescript-90#readme) _(90% coverage)_
+- [`@seantrane/nyc-config-typescript-80`](https://github.com/seantrane/nyc-config/tree/master/packages/nyc-config-typescript-80#readme) _(80% coverage)_
+- [`@seantrane/nyc-config-typescript-70`](https://github.com/seantrane/nyc-config/tree/master/packages/nyc-config-typescript-70#readme) _(70% coverage)_
+- [`@seantrane/nyc-config-typescript-60`](https://github.com/seantrane/nyc-config/tree/master/packages/nyc-config-typescript-60#readme) _(60% coverage)_
 
 ## Install <a id="install"></a>
 

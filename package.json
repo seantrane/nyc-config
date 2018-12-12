@@ -21,8 +21,10 @@
     "lint:packages": "lerna run lint",
     "lint:sh": "docker pull koalaman/shellcheck:stable && docker run -v \"$PWD:/mnt\" koalaman/shellcheck ./packages/**/*.sh && docker kill koalaman/shellcheck 2> /dev/null; docker rm -f koalaman/shellcheck 2> /dev/null; docker rmi -f koalaman/shellcheck:stable 2> /dev/null",
     "lint": "npm run lint:md && npm run lint:packages",
+    "list": "lerna list",
     "markdownlint": "markdownlint",
-    "semantic-release": "lerna exec --concurrency 1 -- semantic-release -e semantic-release-monorepo",
+    "postinstall": "npm run bootstrap",
+    "semantic-release": "lerna exec --concurrency 1 \"npx --no-install semantic-release -e semantic-release-monorepo\"",
     "test:packages": "lerna run test",
     "test": "npm run test:packages"
   },

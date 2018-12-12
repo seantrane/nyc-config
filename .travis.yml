@@ -27,7 +27,6 @@ before_install:
   - npm install -g github-label-sync greenkeeper-lockfile lerna
 install:
   - travis_retry npm install
-  # - lerna bootstrap --hoist
 stages:
   - test
   - name: deploy
@@ -40,13 +39,13 @@ jobs:
       name: 'Checks and Tests'
       script:
         - '[[ $TRAVIS_BRANCH =~ ^greenkeeper.*$ ]] && greenkeeper-lockfile-update || echo "Skipping greenkeeper-lockfile-update";'
-        - npm audit
+        - '[[ $TRAVIS_BRANCH =~ ^greenkeeper.*$ ]] && npm audit || echo "Skipping npm audit";'
         - commitlint-travis
         - npm run lint
         - travis_retry github-label-sync -a "$GH_TOKEN" -l 'https://git.io/fAe5i' seantrane/nyc-config
-        - npm run test
+        - npm test
         - '[[ $TRAVIS_BRANCH =~ ^greenkeeper.*$ ]] && greenkeeper-lockfile-upload || echo "Skipping greenkeeper-lockfile-upload";'
     - stage: deploy
       name: 'Publish and Release'
       script:
-        - lerna exec --concurrency 1 "npx --no-install semantic-release -e semantic-release-monorepo"
+        - npm run semantic-release

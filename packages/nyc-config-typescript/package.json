@@ -7,6 +7,9 @@
   "homepage": "https://github.com/seantrane/nyc-config/tree/master/packages/nyc-config-typescript#readme",
   "repository": "github:seantrane/nyc-config",
   "bugs": "https://github.com/seantrane/nyc-config/issues",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "config",
     "coverage",
@@ -20,8 +23,5 @@
   "scripts": {
     "lint": "exit 0",
     "test": "exit 0"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

@@ -3,7 +3,7 @@
   "description": "A monorepo for extendable istanbuljs/nyc configurations",
   "version": "0.0.0-development",
   "author": "@seantrane",
-  "license": "MIT",
+  "license": "ISC",
   "homepage": "https://github.com/seantrane/nyc-config#readme",
   "repository": "github:seantrane/nyc-config",
   "bugs": "https://github.com/seantrane/nyc-config/issues",

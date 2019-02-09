@@ -3,7 +3,7 @@
   "description": "An extendable istanbuljs/nyc configuration for TypeScript",
   "version": "1.0.0",
   "author": "@seantrane",
-  "license": "MIT",
+  "license": "ISC",
   "homepage": "https://github.com/seantrane/nyc-config/tree/master/packages/nyc-config-typescript#readme",
   "repository": "github:seantrane/nyc-config",
   "bugs": "https://github.com/seantrane/nyc-config/issues",
